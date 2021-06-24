@@ -738,9 +738,7 @@ void starkware_plugin_call(int message, void *parameters) {
                         case STARKWARE_WITHDRAW_AND_MINT:
                         case STARKWARE_WITHDRAW_NFT:
                         case STARKWARE_WITHDRAW_NFT_TO:
-                            strcpy(msg->title, "Master Account");
-                            starkware_print_stark_key(context->starkKey, msg->msg);
-                            break;
+                        
                         default:
                             PRINTF("Unexpected screen %d for %d\n",
                                    msg->screenIndex,
@@ -755,10 +753,6 @@ void starkware_plugin_call(int message, void *parameters) {
                         case STARKWARE_ESCAPE:
                         case STARKWARE_REGISTER_AND_DEPOSIT_TOKEN:
                         case STARKWARE_REGISTER_AND_DEPOSIT_ETH:
-                            strcpy(msg->title, "Master Account");
-                            starkware_print_stark_key(context->starkKey, msg->msg);
-                            break;
-
                         case STARKWARE_DEPOSIT_TOKEN:
                         case STARKWARE_DEPOSIT_ETH:
                         case STARKWARE_PROXY_DEPOSIT_TOKEN:
